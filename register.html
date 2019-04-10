@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Register - EPIC MAIL</title>
+    <link rel="icon" href="images/icon.png" />
+    <meta name="description" content="Welcome to EPICMAIL" />
+    <meta name="keywords" content="Homepage" />
+    <meta name="author" content="Gilles Kagarama" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.0.1.css"
+    />
+    <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="js/init.js"></script> -->
+    <script type="module" src="src/register.js"></script>
+  </head>
+  <body class="indigo">
+    <div id="message"></div>
+    <section>
+      <div class="row ">
+        <div class="container">
+          <div class="s4 m4 l6">
+            <div class="xl-padding move-1">
+              <div class="row center-align">
+                <a href="./index.html">
+                    <div class="image move-2">
+                      <img
+                        src="images/logo.svg"
+                        style="width:219px;height:60px"
+                        alt="EPICMAIL"
+                      />
+                    </div>
+                </a>
+              </div>
+              <br />
+              <div class="box white text-indigo radius-2 shadow-5">
+                <br>
+                <h1 class="center-align">Register</h1>
+                <form action="/" method="POST" id="register">
+                  <div class="input-field">
+                    <label for="firstname">Firstname</label>
+                    <input
+                      type="text"
+                      id="firstname"
+                      name="firstname"
+                      minlength="3"
+                      maxlength="60"
+                      placeholder="Your full names"
+                      autocomplete="off"
+                      value="John"
+                    />
+                  </div>
+                  <div class="input-field">
+                    <label for="lastname">Lastname</label>
+                    <input
+                      type="text"
+                      id="lastname"
+                      name="lastname"
+                      minlength="3"
+                      maxlength="60"
+                      placeholder="Your full names"
+                      autocomplete="off"
+                      value="Doe"
+                    />
+                  </div>
+                  <div class="input-field">
+                    <label for="email"
+                      >Type email (5 to 15 charachers)</label
+                    >
+                    <div class="s4 m4 l4">
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        minlength="5"
+                        maxlength="30"
+                        placeholder="Email"
+                        autocomplete="off"
+                        value="kagaramag@gmail.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="input-field">
+                    <div class="s4 m4 l4">
+                      <label for="password">Password</label>
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        minlength="6"
+                        maxlength="15"
+                        placeholder="Type your password"
+                        autocomplete="off"
+                        value="123123"
+                      />
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="input-field">
+                    <button type="submit" id="registerNow" class="btn indigo linkHover text-white bold radius-6 m-text l-padding">
+                      Register Now
+                    </button>
+                  </div>
+                  <div class="row">
+                    <div class="l-padding">
+                      Already have an account?
+                      <a href="./login.html" class="bold linkHover">Sign In</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </body>
+</html>

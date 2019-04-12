@@ -1,11 +1,10 @@
 import config  from './config.mjs';
 import { requestPost } from './request/post.mjs';
-import { message } from './message.mjs';
+
 
 // // register
 
 const btn = document.getElementById('registerNow');
-// register.onsubmit = submit.bind(register);
 btn.addEventListener('click', submit);
 function submit(e) {
     message("wait...", "info");
@@ -16,7 +15,6 @@ function submit(e) {
       password : document.getElementById("password").value
     };
     const inputs = `firstname=${user.firstname}&lastname=${user.lastname}&email=${user.email}&password=${user.password}`;
-    console.log(inputs);
     requestPost(`${config.url}auth/signup`, 'POST', inputs, 'register', null);
     e.preventDefault();
 }

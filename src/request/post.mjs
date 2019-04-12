@@ -1,4 +1,6 @@
+import config  from './../config.mjs';
 import { message } from './../message.mjs';
+import { requestGet } from './../request/get.mjs';
 export function requestPost(url, VERB, inputs, action, token){
    var xhr = new XMLHttpRequest();
    xhr.open(VERB, url, true);
@@ -34,6 +36,16 @@ function requestHandler(response, action){
     setTimeout(() => {
         window.location.href = "inbox.html";            
     }, 2500);
+  }
+  // Login
+  if(action === 'login'){
+    message("Logged in, wait a moment...",'success');
+    const token = JSON.stringify(response.token);
+    localStorage.removeItem('token');
+    localStorage.setItem('token', token);
+    console.log(token);
+    requestGet(`${config.url}profile`, 'profile', JSON.parse(token));
+
   }
   // send message
   if(action === 'compose'){

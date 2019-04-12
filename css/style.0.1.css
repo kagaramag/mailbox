@@ -454,3 +454,5 @@ table tr:last-child{border-bottom:1px!important}
 .oneuser, .onegroup{border-bottom: 1px solid #efefef}
 
 .onemail .hoverMailToRead{cursor: pointer;}
+
+#noContent{display: none}

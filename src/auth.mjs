@@ -1,7 +1,6 @@
 
- const token = JSON.parse(localStorage.getItem('token'));
-if(!token || token === ''){
-   console.log(token.split('.')[1]);
+const token = JSON.parse(localStorage.getItem('token'));
+if(!token || token === '' || token === null){
    window.location.href = "login.html";
 }
 

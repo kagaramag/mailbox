@@ -1,6 +1,7 @@
 import config  from './config.mjs';
 import token from './auth.mjs';
 import { requestPost } from './request/post.mjs';
+import { requestGet } from './request/get.mjs';
 import { message } from './message.mjs';
 
 // compose
@@ -11,16 +12,19 @@ function send(e) {
     message('Waiting...','info');
     const memo = {
         subject: document.getElementById("subject").value,
-        memo: document.getElementById("memo").value,
-        receiverid: 2
+        email: document.getElementById("email").value,
+        memo: document.getElementById("memo").value
     };
     if(!memo.memo || memo.memo.length > 10){
-    const inputs = `subject=${memo.subject}&message=${memo.memo}&receiverid=${memo.receiverid}`;
+    const inputs = `subject=${memo.subject}&message=${memo.memo}&email=${memo.email}`;
     console.log(inputs);
     requestPost(`${config.url}messages`, 'POST', inputs, 'compose', token);
     }else{
-        console.log("andika sha")
+        message('Error occured, check your inputs...','error');
     }
     e.preventDefault();
 }
+
+// load users
+requestGet(`${config.url}users`, 'users');
 

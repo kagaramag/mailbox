@@ -1,3 +1,5 @@
+import { message } from './message.mjs';
+
 const sidebar = document.getElementById("sidebar");
 const doc = document.documentElement;
 // set sidebar height
@@ -7,6 +9,9 @@ window.addEventListener('resize', resize);
 function resize() {
    sidebar.style.height = `${document.documentElement.clientHeight}px`;
 }
+
+
+
 // build sidebar nav
 sidebar.innerHTML = `
 <li><div class="center-align"><a href="./inbox.html"><img src="images/logo.svg" style="width:98%;max-width:200px" alt="EPICMAIL"></a></div></li>
@@ -22,7 +27,7 @@ sidebar.innerHTML = `
    <li><a class="text-grey truncate" href="groups.html"> <span class="fas fa-angle-right"></span> <span class="menulink"> DJ Units </span></a></li>
    <li><div class="divider indigo darken-2"></div></li>
    <li><a class="text-grey" href="me.html"> <span class="fas fa-user"></span> <span class="menulink"> Profile</span></a></li>
-   <li class="logout"><a class="text-grey" href="#" onclick="logout();"> <span class="fas fa-sign-out-alt"></span> <span class="menulink"> Logout</span></a></li>
+   <li id="logout" class="logout"><a class="text-grey" href="#"> <span class="fas fa-sign-out-alt"></span> <span class="menulink"> Logout</span></a></li>
 `
 
 // mobile footer links
@@ -46,3 +51,15 @@ fixheader.innerHTML = `
    </div>
    </div>
 `
+
+// logout
+const logout = document.getElementById("logout");
+logout.addEventListener("click", logoutFx);
+function logoutFx(){
+   localStorage.removeItem("token");
+   message("Logged out successfully", "info");
+   setTimeout(() => {
+      window.location.href = './login.html';
+   }, 2000);
+}
+

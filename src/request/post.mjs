@@ -43,7 +43,6 @@ function requestHandler(response, action){
     const token = JSON.stringify(response.token);
     localStorage.removeItem('token');
     localStorage.setItem('token', token);
-    console.log(token);
     requestGet(`${config.url}profile`, 'profile', JSON.parse(token));
 
   }

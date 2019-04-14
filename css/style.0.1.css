@@ -299,7 +299,7 @@ button.btn{padding:1.5em;cursor: pointer;}
 .jazzberry{background:#F68021} .text-jazzberry{color:#F68021}
 .red{background:#940f0f} .text-red{color:#940f0f}
 .grey.darken-1{background:#efefef} .text-grey.text-darken-1{color:#efefef}
-.grey.darken-2{background:#535353} .text-grey.text-darken-2{color:#535353}
+.grey.darken-2{background:#727272} .text-grey.text-darken-2{color:#727272}
 .grey.darken-3{background:#252525} .text-grey.text-darken-3{color:#252525}
 .indigo.darken-1{background:#311B92} .text-indigo.text-darken-1{color:#311B92}
 .indigo.darken-2{background:#2e134d} .text-indigo.text-darken-2{color:#2e134d}
@@ -332,11 +332,11 @@ form{margin:0.5%;width:99%;clear: both;}
 }
 .input-field input:focus,.input-field textarea:focus {
     outline-width: 0;
-    border:1px solid #cdcdcd!important;
+    border:1px solid #e6e6e6!important;
     outline:none!important;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.4)!important;
-    -moz-box-shadow:0px 0px 10px rgba(0,0,0,0.4)!important;
-    -webkit-box-shadow:0px 0px 10px rgba(0,0,0,0.4)!important;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2)!important;
+    -moz-box-shadow:0px 0px 10px rgba(0,0,0,0.2)!important;
+    -webkit-box-shadow:0px 0px 10px rgba(0,0,0,0.2)!important;
 }
 *:focus {
     outline: none;
@@ -454,5 +454,6 @@ table tr:last-child{border-bottom:1px!important}
 .oneuser, .onegroup{border-bottom: 1px solid #efefef}
 
 .onemail .hoverMailToRead{cursor: pointer;}
+.m_profile img{max-width:80%}
 
-#noContent{display: none}
+#noContent, #loading{margin:55px auto;}

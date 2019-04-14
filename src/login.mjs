@@ -13,7 +13,6 @@ function submit(e) {
       password : document.getElementById("password").value
     };
     const inputs = `email=${user.email}&password=${user.password}`;
-    console.log(inputs);
     requestPost(`${config.url}auth/login`, 'POST', inputs, 'login', null);
     e.preventDefault();
 }
